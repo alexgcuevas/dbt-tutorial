@@ -1,0 +1,13 @@
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /Users/alex/Downloads/dbt-user-creds.json
+      project: alex-kpi-tracking
+      dataset: dbt_alex
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive
